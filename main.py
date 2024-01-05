@@ -17,4 +17,5 @@ for city in city_list:
     dict_res = {measur_time, degree_c, city}
     list_date.append(dict_res)
 DataWriter.save_csv(list_date, 'wether_result')
+#
 
