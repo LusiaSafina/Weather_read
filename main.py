@@ -14,7 +14,7 @@ list_date = []
 for city in city_list:
     result = RequestSender.request_sender(city)
     measur_time, degree_c = DataParcer.data_parcer(result)
-    dict_res = {measur_time, degree_c, city}
+    dict_res = {'time': measur_time, 'temerature': degree_c, 'city': city}
     list_date.append(dict_res)
 DataWriter.save_csv(list_date, 'wether_result')
 #
